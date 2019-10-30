@@ -3,11 +3,11 @@ package com.company;
 public class ConditionalExercises {
 
     public static void main(String[] args) {
-        /* double wages = totalWages(45, 12.5);
+        double wages = totalWages(45, 12.5);
         System.out.println("Wages for 45 hours at $12.50 " + wages);
         wages = totalWages(30, 10);
         System.out.println("Wages for 30 hours at $10.00 " + wages);
-
+        /*
         System.out.println("2000 " + isLeapYear(2000));
         System.out.println("2004 " + isLeapYear(2004));
         System.out.println("2003 " + isLeapYear(2003));
@@ -38,13 +38,18 @@ public class ConditionalExercises {
 
         */
     }
-    public double totalWages(double hours, double rate) {
+    public static double totalWages(double hours, double rate) {
         double wages;
-        if (hours<40) {
-            return hours*rate;
+        if (hours<=40) {
+            wages = hours*rate;
         }
-        if (hours>40) {
-            return (hours
+        else {
+            wages = (40 * rate) + ((hours - 40) * (1.5 * rate));
         }
+        return wages;
     }
+    public static boolean isLeapYear(int year) {
+        if
+    }
+
 }
