@@ -1,5 +1,6 @@
 package com.company;
 import java.awt.Color;
+//Mahathi Athreya 3B
 
 public class ConditionalExercises {
 
@@ -29,7 +30,7 @@ public class ConditionalExercises {
         System.out.println("Best match 2 4 4 " + bestMatch(2,4,4));
         System.out.println("Best match 8 8 4 " + bestMatch(8,8,4));
         System.out.println("Best match 4 4 4 " + bestMatch(4,4,4));
-        /*
+
         System.out.println("Find Best fit 2 3 6 is " + findBestFit(2,3,6));
         System.out.println("Find Best fit 4 3 6 is " + findBestFit(4,3,6));
         System.out.println("Find Best fit 3 4 6 is " + findBestFit(3,4,6));
@@ -37,7 +38,7 @@ public class ConditionalExercises {
         System.out.println("Find Best fit 6 3 4 is " + findBestFit(6,3,4));
         System.out.println("Find Best fit 3 6 4 is " + findBestFit(3,6,4));
 
-        */
+
     }
     public static double totalWages(double hours, double rate) {
         double wages;
@@ -124,18 +125,32 @@ public class ConditionalExercises {
     Best match 4 4 4 java.awt.Color[r=128,g=128,b=128] */
     public static int findBestFit(int size1, int size2, int space) {
         int x = 0;
-        if (size1 + size2 <= space) {
+        int y = size1 + size2;
+        if (y <= space) {
             x=3;
         }
-        else if (size1 + size2 > space && size1 > size2 && size1 < space) {
+        else if (y > space && size1 > size2 && size1 < space) {
             x=1;
         }
-        else if (size1 + size2 > space && size2 > size1 && size2 < space) {
+        else if (y > space && size2>space  && size1 < space) {
+            x=1;
+        }
+        else if (y > space && size2 > size1 && size2 < space) {
             x=2;
         }
-        else if (size1 + size2 > space && size1 > space && size2 > space) {
+        else if (y > space && size1 > space && size2 < space) {
+            x=2;
+        }
+        else if (y > space && size1 > space && size2 > space) {
             x=0;
         }
         return x;
     }
+    /* Find Best fit 2 3 6 is 3
+    Find Best fit 4 3 6 is 1
+    Find Best fit 3 4 6 is 2
+    Find Best fit 2 3 1 is 0
+    Find Best fit 6 3 4 is 2
+    Find Best fit 3 6 4 is 1
+     */
 }
